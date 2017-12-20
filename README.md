@@ -1,4 +1,4 @@
-# autoupass
+# AutoUpass
 Automates the process of renewing the BC Upass
 
 This Python script utilizes Selenium and the Firefox webdriver.
