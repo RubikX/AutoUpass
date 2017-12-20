@@ -1,3 +1,4 @@
+import getpass
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
@@ -9,7 +10,7 @@ from datetime import datetime
 
 # SFU Computing ID and password
 username = input("Please enter your SFU username: ")
-password = input("Please enter your SFU password: ")
+password = getpass.getpass(prompt="Please enter your SFU password: ")
 
 # Driver setup and load Upass webpage
 driver = webdriver.Firefox()
