@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import getpass
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -13,7 +15,7 @@ username = input("Please enter your SFU username: ")
 password = getpass.getpass(prompt="Please enter your SFU password: ")
 
 # Driver setup and load Upass webpage
-driver = webdriver.Firefox()
+driver = webdriver.PhantomJS()
 driver.get("https://upassbc.translink.ca/")
 
 try:
