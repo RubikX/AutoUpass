@@ -53,7 +53,7 @@ except TimeoutException:
 	print("Page timeout")
 
 # Request Upass and save screenshot
-# driver.find_element_by_css_selector("#chk_1").click()
+driver.find_element_by_css_selector("#chk_1").click()
 now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-# driver.find_element_by_id("requestButton").click()
+driver.find_element_by_id("requestButton").click()
 driver.save_screenshot('screenshot-{}.png'.format(now))
