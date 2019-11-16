@@ -14,8 +14,10 @@ from datetime import datetime
 username = input("Please enter your SFU username: ")
 password = getpass.getpass(prompt="Please enter your SFU password: ")
 
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
 # Driver setup and load Upass webpage
-driver = webdriver.PhantomJS()
+driver = webdriver.Chrome("/usr/bin/chromedriver", chrome_options=options)
 driver.get("https://upassbc.translink.ca/")
 
 try:
@@ -51,7 +53,7 @@ except TimeoutException:
 	print("Page timeout")
 
 # Request Upass and save screenshot
-driver.find_element_by_css_selector("#chk_1").click()
+# driver.find_element_by_css_selector("#chk_1").click()
 now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-driver.find_element_by_id("requestButton").click()
+# driver.find_element_by_id("requestButton").click()
 driver.save_screenshot('screenshot-{}.png'.format(now))
